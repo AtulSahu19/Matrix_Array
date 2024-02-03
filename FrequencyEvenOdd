@@ -1,0 +1,33 @@
+package Matrix;
+
+public class FrequencyEvenOdd {
+	public static void main(String[] args) {
+		
+	int arr[][]= {{6,5,4},{8,7,5},{0,2,3}};
+	
+	int row=arr.length;
+	int col=arr[1].length;
+	
+	int countEven=0;//count even elements
+	int countOdd=0;//count odd elements
+	
+	for(int i=0;i<row;i++)//outer loop for row
+    {
+   	 for(int j=0;j<col;j++)//inner loop for column
+   	 {
+   		 if(arr[i][j]%2==0 && arr[i][j]!=0)//0 value is not counted in even or odd
+   		 {
+   			 countEven++;
+   		 }
+   		 else
+   		 { if(arr[i][j]!=0) {
+   			 countOdd++;
+   		 }
+   		 }
+   	 }
+    }
+	System.out.println("Frequency of even elements is :"+countEven);
+	System.out.println("Frequency of odd elements is :"+countOdd);
+}
+
+}
