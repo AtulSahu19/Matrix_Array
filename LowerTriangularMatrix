@@ -1,0 +1,31 @@
+package Matrix;
+
+public class LowerTriangularMatrix {
+public static void main(String[] args) {
+	
+	int a[][]= {{4,5,9},{8,6,5},{5,8,6}};
+	
+	int row=a.length;// length of row is 3
+	int col=a[2].length;// length of column is 3
+	
+	if (row!=col)//if they are not matched it is square matrix
+	{
+		System.out.println("this is square matrix");
+	} else {
+     for(int i=0;i<row;i++)//outer loop for row
+     {
+    	 for(int j=0;j<col;j++)//inner loop for column
+    	 {
+    		 if (j>i) {
+    			 System.out.print("*"+" ");
+				
+			} else {
+				System.out.print(a[i][j]+" ");
+
+			}
+    	 }
+    	 System.out.println();
+     }
+	}
+}
+}
