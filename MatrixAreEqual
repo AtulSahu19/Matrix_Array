@@ -1,0 +1,47 @@
+package Matrix;
+
+public class MatrixAreEqual {
+	public static void main(String[] args) {
+		boolean result=true;
+		
+	
+	int a[][]= {{3,4,5,9},{8,7,6,5},{5,8,7,6}};
+	
+	int b[][]= {{3,4,5,9},{8,7,6,5},{5,8,7,6}};
+	
+	int row1=a.length;//a[][] length of row
+	int col1=a[0].length;//a[][] length of column
+	
+	int row2=b.length;//b[][] length of row
+	int col2=b[1].length;//b[][] length of column
+	
+	if(row1!=row2 ||col1!=col2)//if a[][] of row and b[][] of row or a[][] of column and b[][] of column is not matched they executed
+	{
+		System.out.println("Matrix are not equal");
+	}
+	else
+	{
+		for(int i=0;i<row1;i++)//outer loop for row
+		{
+			for(int j=0;j<col1;j++)//inner loop for column
+			{
+		if(a[i][j]!=b[i][j])//check all the value if any one value is not matched result will be false and break the statement
+		{
+			 result=false;
+			 break;
+
+		}
+		     }
+		}
+	}
+	
+	if(result)
+	{
+		System.out.println("Matrix are equal");
+	}
+	else
+	{
+		System.out.println("Matrix are not equal");
+	}
+	}
+}
