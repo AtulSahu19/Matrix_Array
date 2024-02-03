@@ -1,0 +1,21 @@
+package Matrix;
+
+public class TransformationOfMatrix {
+public static void main(String[] args) {
+	int arr[][]= {{6,5,4},{8,7,5},{1,2,3}};
+	
+	int row=arr.length;
+	int col=arr[2].length;
+	
+	int result[][]=new int [row][col];//create new array to stored transformation of array
+	for(int i=0;i<row;i++)
+	{
+		for(int j=0;j<col;j++)
+		{
+			result[i][j]=arr[j][i];//arr of column and rows is stored in result array
+			System.out.print(result[i][j]+" ");
+		}
+		System.out.println();
+	}
+}
+}
