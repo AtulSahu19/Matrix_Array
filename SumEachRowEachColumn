@@ -1,0 +1,39 @@
+
+
+public class SumEachRowEachColumn {
+public void row( int arr[][],int row1,int column1)//in formal arguments we passes arr ,length of row,length of column 
+{
+	
+	for(int i=0;i<row1;i++)
+	{
+		int sum=0;//sum value will be zero end of every inner loop
+		for(int j=0;j<column1;j++)
+		{
+			sum=sum+arr[i][j];//select value constant row and change of column
+		}
+		System.out.println("Sum of "+(i+1)+" row is :"+sum);
+	}
+	
+}
+public void column(int arr[][],int row1,int column1)//in formal arguments we passes arr ,length of row,length of column 
+{
+	for(int i=0;i<row1;i++)
+	{
+		int sum=0;//sum value will be zero end of every inner loop
+		for(int j=0;j<column1;j++)
+		{
+			sum=sum+arr[j][i];//select value change of row and constant column 
+		}
+		System.out.println("Sum of "+(i+1)+" column is :"+sum);
+	}
+}
+public static void main(String[] args) {
+	SumEachRowEachColumn ref=new SumEachRowEachColumn();
+	int arr[][]= {{6,5,4},{8,7,5},{5,2,3}};
+	
+	int row1=arr.length;
+	int column1=arr[1].length;
+	ref.row(arr,row1,column1);//call row method  
+	ref.column(arr,row1,column1);//call column method
+}
+}
